@@ -1,0 +1,27 @@
+# NodeJS files
+node_modules
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+deployments/
+.openzeppelin
+arguments.js
+
+# IDE
+.idea
+
+# MacOS files
+.DS_Store
+
+# Env files
+.env
+.env-*

@@ -13,12 +13,17 @@ contract Nubit is Initializable, ERC20Upgradeable, OwnableUpgradeable, UUPSUpgra
         _disableInitializers();
     }
 
+    function decimals() public pure override returns (uint8) {
+        return 6;
+    }
+
     function initialize(address initialOwner) initializer public {
         __ERC20_init("Nubit", "NB");
         __Ownable_init(initialOwner);
         __UUPSUpgradeable_init();
 
-        _mint(msg.sender, 1000000000 * 10 ** decimals());
+        // One Billion Supply
+        _mint(initialOwner, 1000000000 * 10 ** decimals());
     }
 
     function _authorizeUpgrade(address newImplementation)
